@@ -7,7 +7,9 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# This is Jared's awesome website
+
+My name is Jared and I make websites!!
 
 You can learn about me [here](jaredgarfinkel.html)
 
