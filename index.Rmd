@@ -13,4 +13,13 @@ output:
 
 ## Let's add some links
 
-I often use [google](google.com) to do data science.
+I often use [google](http://www.google.com) to do data science.
+
+## let's add an image
+
+![](images/image.jpg)
+
+This will load and display images/image.jpg (I usually keep my images inside an images folder to reduce clutter)
+
+## add another page
+
