@@ -17,7 +17,7 @@ library(plotly)
 
 
 ```{r}
-data("rest_inspec")
+data("rest_inspec") %>% 
 ```
 
 Column {data-width=650}
@@ -25,8 +25,28 @@ Column {data-width=650}
 
 ### Chart A
 
-```{r}
-
+```{r, fig.width = 10}
+rest_inspec %>% 
+  separate(inspection_date, 
+           into = c("year", "month", "date"), 
+           sep = "\\-", 
+           remove = FALSE) %>% 
+  filter(grade %in% c("A", "B", "C"),
+         year %in% 2010:2017,
+         str_detect(inspection_type, "Re-inspection") == TRUE,
+         score > 0) %>% 
+  group_by(year) %>% 
+  mutate(
+    count = n()
+  ) %>% 
+  filter(grade == "A") %>% 
+  mutate(
+    count_a = n()) %>% 
+  distinct(count, count_a) %>% 
+  summarize(
+    a_rate = round(count_a/count*100, digits = 2)
+  ) %>% 
+  plot_ly(x = ~year, y = ~a_rate, type = "scatter", mode = "marker")
 ```
 
 Column {data-width=350}
@@ -35,7 +55,17 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+rest_inspec %>% 
+  filter(!is.na(violation_code)) %>% 
+  group_by(dba) %>% 
+  summarize(
+    count = n()) %>%
+  filter(count > 500) %>% 
+  mutate(dba =
+           as.factor(dba),
+         dba = 
+           fct_reorder(dba, count)) %>% 
+  plot_ly(x = ~dba, y = ~count, type = "bar")
 ```
 
 ### Chart C
