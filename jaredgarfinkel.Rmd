@@ -33,6 +33,7 @@ header %>%
 | cell    |$~~$ (516) 972-5348 |
 | email   |$~~$ jared.garfinkel@gmail.com |
 | address |$~~$ 65 Cornell Drive, Plainview, NY 11803 |
+| LinkedIn|$~~$ (https://www.linkedin.com/in/jaredgarfinkel)
 
 ## Experience
 

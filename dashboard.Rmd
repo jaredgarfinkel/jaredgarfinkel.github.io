@@ -17,7 +17,7 @@ library(plotly)
 
 
 ```{r}
-data("rest_inspec") %>% 
+data("rest_inspec")
 ```
 
 Column {data-width=650}
@@ -32,8 +32,8 @@ rest_inspec %>%
            sep = "\\-", 
            remove = FALSE) %>% 
   filter(grade %in% c("A", "B", "C"),
-         year %in% 2010:2017,
-         str_detect(inspection_type, "Re-inspection") == TRUE,
+         lubridate::year(inspection_date) %in% 2013:2017,
+         str_detect(inspection_type, "Initial") == FALSE,
          score > 0) %>% 
   group_by(year) %>% 
   mutate(
@@ -46,7 +46,15 @@ rest_inspec %>%
   summarize(
     a_rate = round(count_a/count*100, digits = 2)
   ) %>% 
-  plot_ly(x = ~year, y = ~a_rate, type = "scatter", mode = "marker")
+  plot_ly(x = ~year, y = ~a_rate, type = "scatter", mode = "marker") %>% 
+  layout(xaxis =
+           list(
+             title = "Year"
+           ),
+         yaxis =
+           list(
+             title = "'A' Grades as a Percent of Grades"
+           ))
 ```
 
 Column {data-width=350}
@@ -65,12 +73,37 @@ rest_inspec %>%
            as.factor(dba),
          dba = 
            fct_reorder(dba, count)) %>% 
-  plot_ly(x = ~dba, y = ~count, type = "bar")
+  plot_ly(x = ~dba, y = ~count, type = "bar") %>% 
+  layout(xaxis =
+           list(
+             title = "Business"
+           ),
+         yaxis =
+           list(
+             title = "Number of Violations"
+           ))  
 ```
 
 ### Chart C
 
-```{r}
-
+```{r, eval = FALSE}
+rest_inspec %>% 
+  group_by(violation_code, year(inspection_date)) %>% 
+  summarize(
+    count = n()) %>% 
+  mutate(violation_code =
+           as.factor(violation_code),
+         violation_code =
+           fct_reorder(violation_code, desc(count))) %>% 
+  top_n(violation_code, 10, count) %>% 
+  plot_ly(y = ~count, color = ~violation_code, type = "box") %>% 
+  layout(xaxis =
+           list(
+             title = "Year"
+           ),
+         yaxis =
+           list(
+             title = "Types of Violations"
+           ))  
 ```
 
