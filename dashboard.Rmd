@@ -80,30 +80,26 @@ rest_inspec %>%
            ),
          yaxis =
            list(
-             title = "Number of Violations"
+             title = "Number of Violations (2013-2017)"
            ))  
 ```
 
 ### Chart C
 
-```{r, eval = FALSE}
+Pick a borough and compare the violations by type of food
+
+```{r}
 rest_inspec %>% 
-  group_by(violation_code, year(inspection_date)) %>% 
-  summarize(
-    count = n()) %>% 
-  mutate(violation_code =
-           as.factor(violation_code),
-         violation_code =
-           fct_reorder(violation_code, desc(count))) %>% 
-  top_n(violation_code, 10, count) %>% 
-  plot_ly(y = ~count, color = ~violation_code, type = "box") %>% 
-  layout(xaxis =
-           list(
-             title = "Year"
-           ),
-         yaxis =
-           list(
-             title = "Types of Violations"
-           ))  
+  mutate(
+    year = lubridate::year(inspection_date),
+    boro =
+      as.factor(boro)
+  ) %>% 
+  filter(year %in% 2013:2017,
+         grade %in% c("A", "B", "C"),
+         !is.na(score),
+         boro != "Missing") %>%
+  group_by(boro) %>% 
+  plot_ly(x = ~boro, y = ~score, type = "box")
 ```
 
