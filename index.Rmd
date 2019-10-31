@@ -14,15 +14,3 @@ You can learn about me [here](jaredgarfinkel.html)
 
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
 
-## Let's add some links
-
-I often use [google](https://www.google.com/) to do data science.
-
-## let's add an image
-
-![](images/image.jpg)
-
-This will load and display images/image.jpg (I usually keep my images inside an images folder to reduce clutter)
-
-## add another page
-

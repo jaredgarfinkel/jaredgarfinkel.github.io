@@ -11,6 +11,10 @@ navbar:
           href: plotly.html
         - text: "Dashboard"
           href: dashboard.html
+        - text: "Contributions"
+          href: contributions.html
+    - icon: fa-linkedin fa-lg
+      href: http://linkedin.com/in/jaredgarfinkel
     - icon: fa-envelope fa-lg
       href: mailto:<jared.garfinkel@gmail.com>
     - icon: fa-github fa-lg
