@@ -11,10 +11,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![Water Quality Review](data/DioxaneReviewMay25.pdf){width=100%}
 
+[Download](data/DioxaneReviewMay25.pdf)
+
 ******
 
 ![Thesis: Heavy Metals in Road Deposited Sediment in Town of Oyster Bay](data/GARFINKEL-FinalDraft.pdf){width=100%}
 
+[Download](data/GARFINKEL-FinalDraft.pdf)
+
 ******
 
 ![Waste Audit Case Study](data/WasteAuditBackground7.1.pdf){width=100%}
+
+[Download](data/WasteAuditBackground7.1.pdf)
