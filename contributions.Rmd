@@ -1,8 +1,9 @@
 ---
 title: "Thesis and Contributions"
-author: "Jared Garfinkel"
-date: "10/31/2019"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
