@@ -10,7 +10,46 @@ output:
 
 My name is Jared and I make websites!!
 
-You can learn about me [here](jaredgarfinkel.html)
-
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
 
+## Bio
+
+Jared Garfinkel is a candidate for a Master of Science (M.S.) 
+
+in Biostatistics at Columbia University seeking a scientific 
+
+role doing a public service in the nonprofit or government sectors. 
+
+Garfinkel began to study epidemics as early as 4th grade, having 
+
+turned in a project on the mysteries surrounding the bubonic 
+
+plague. It was Garfinkel’s dream to become an expert in public health.
+
+Garfinkel followed his curiosity about climate change and 
+
+eventually achieved a Master of Arts (M.A.) in Sustainability 
+
+from Hofstra University on Long Island. While climate change 
+
+has and will continue to affect the work public health 
+
+practitioners do, it was Garfinkel’s curiosity about social 
+
+equity that drove him back to public health. 
+
+Few inventions have given rise to gains in living conditions 
+
+for more individuals than running water and sanitation. Public 
+
+health efforts across time have provided much needed support 
+
+for advancing scientific solutions in times of political and 
+
+social distress. Garfinkel hopes to imagine a world in which 
+
+maternal health is made a priority even in times of climate 
+
+change and global pandemic.
+
+You can find my CV [here](jaredgarfinkel.html)

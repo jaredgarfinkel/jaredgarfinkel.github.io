@@ -1,6 +1,6 @@
 ---
 title: "Jared Garfinkel"
-author: "Sustainability professional seeking a scientific role doing a public service."
+author: "Biostatistics master's candidate seeking a scientific role doing a public service."
 date: "10/17/2019"
 output: html_document
 ---
@@ -35,98 +35,86 @@ header %>%
 | address |$~~$ 65 Cornell Drive, Plainview, NY 11803 |
 | LinkedIn |$~~$ https://www.linkedin.com/in/jaredgarfinkel
 
-## Experience
-
-Long Island Progressive Coalition, Massapequa, NY
-
-May 2017 - present
-
-Volunteer
-
-* Grew connections to Long Island residents in an effort to align local- and state-level
-
-    elected officials with climate action legislation.
-
-* Led volunteer climate justice groups on Long Island.
-
 ***
-
-IT Asset Management Group, Farmingdale, NY 
-
-March 2019 - August 2019
-
-Administrative Assistant
-
-* Tracked up to twenty wholesale orders a month for an e-waste company.
-
-* Processed checks and bills, followed up with accounts receivable and accounts payable, 
-
-    purchased warehouse supplies from twenty vendors up to ten times a week. 
-    
-***
-
-Veolia ES Technical Solutions, Wantagh, NY
-
-March 2018 - December 2018
-
-Environmental Specialist I
-
-* Provided specialized transportation and disposal services to clients. 
-
-***
-
-National Center for Suburban Studies, Hempstead, NY
-
-September2016 - May 2017
-
-Graduate Research Intern
-
-* Initiated a groundwater quality data research project for Long Island focusing 
-
-    on 1,4-dioxane by analyzing over 500 points of previously collected water quality data. 
-
-* Presented my report to the Nassau County Comptroller’s Environmental Advisory Working Group. 
-
-***
-
-National Center for Suburban Studies, Hempstead, NY
-
-September 2013 - May 2014
-
-Undergraduate Research Assistant
-
-* Leveraging a first-time waste audit of an on-campus dining hall, successfully lobbied staff 
-
-    and administrators to expand the plastic recycling program to over 100 buildings. 
-    
-* Coordinated the projects of three undergraduate students on food waste. 
 
 ## Education
 
-Columbia University, New York, NY
+### Columbia University, New York, NY
 
-Expected 2021
+#### Expected 2021
 
-Master of Science in Biostatistics
+##### Master of Science in Biostatistics
 
-***
+### Hofstra University, Hempstead, NY
 
-Hofstra University, Hempstead, NY
+#### May 2017
 
-May 2017
-
-Master of Arts in Sustainability
+##### Master of Arts in Sustainability
 
 * Thesis: Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, NY
 
 * Outstanding Academic Achievement, Geology, Environment and Sustainability Department 2017
 
-* Cumulative GPA: 3.67/4.0
+### Hofstra University, Hempstead, NY
+
+#### May 2014
+
+##### Bachelor of Science in Sustainability Studies
+
+* Minors in Biology, Chemistry, and Mathematics
 
 ***
 
-Hofstra University, Hempstead, NY
+## Experience
 
-May 2014
+### ICAP at Columbia University, New York, NY
 
-Bachelor of Science in Sustainability Studies; minors in Biology, Chemistry, and Mathematics
+#### July 2020 - present
+
+##### Student Assistant, Data Management and Informatics
+
+* Translated data into an actionable solution to reduce data collection time-cost measures by 30% by potentially cutting an expensive blood test from a data collection protocol.
+
+* Developed a statistical analysis plan (SAP) to calculate prevalence, sensitivity and specificity of public health survey data in a 20,000 by 20 dataframe using latent class analysis in randomLCA in R.
+
+* Created 7 weighted summary tables and 4 figures using tidyverse and survey packages in R to improve negotiations with outside contractors on summary sheets by 15%.
+
+* Presented a visualization of the locations of 200 outstanding returns on country maps to the team using GIS tools in R to assess the situation on the ground in over 40 districts in 3 countries.
+
+### The Mill River Project, Hempstead, NY							 	  
+
+#### June 2020 - present
+
+##### Project Management Intern								         
+
+* Took charge of a community resilience survey design related to COVID-19 to collect 100 resident opinions for future research and public education about emergency preparedness communication.
+
+* Delivered an Institutional Review Board (IRB) protocol 1 week ahead of schedule.
+
+* Coordinated tasks between 2 teams on 4 research projects to meet deadlines.
+
+* Coached 3 high school students on survey data projects for 6 weeks to improve learning objectives.
+
+### Long Island Progressive Coalition, Massapequa, NY						           
+
+#### May 2017 – May 2020
+
+##### Sunrise Long Island Chapter Coordinator/ Ecosocialist Working Group Chair 	        
+
+* Persuaded 6 state-level elected officials to vote in favor of climate action legislation.
+
+* Led group discussions at monthly meetings and spoke at 4 lobby sessions with elected officials.
+
+* Facilitated 2 climate justice groups to influence community members to commit to volunteer for climate justice on Long Island by promoting coalition building with New York Renews.
+
+* Addressed a crowd of 2,000 people at a rally to deliver a land acknowledgement at the county legislature representing Sunrise Long Island.
+
+### National Center for Suburban Studies, Hempstead, NY
+
+#### September2016 - May 2017
+
+##### Graduate Research Intern
+
+* Generated a groundwater quality data research project using statistical analysis of 500 data points.
+
+* Recommended a public health solution to the Nassau County Comptroller’s Environmental Advisory Working Group that would reduce a harmful chemical found in drinking water by 50%.
