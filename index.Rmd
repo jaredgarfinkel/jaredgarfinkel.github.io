@@ -10,33 +10,43 @@ output:
 
 My name is Jared and I make websites!!
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+I have always wanted to be a scientist for as long as I can 
+
+remember. 
+
+[scientist pic]
+
+I used to make up quotes.
+
+[chessboard pic]
+
+I wrote this poem a while back.
+
+[pic and poem]
+
+I still love to write.
+
+***
+
+"When issues of significant moral value can be related to safety
+
+they become widely accessible."
+
+- Jared Garfinkel
 
 ## Bio
 
-Jared Garfinkel is a candidate for a Master of Science (M.S.) 
+Jared Garfinkel recently received a Master of Science (M.S.) 
 
-in Biostatistics at Columbia University seeking a scientific 
+degree in Biostatistics from Columbia University and is currently
 
-role doing a public service in the nonprofit or government sectors. 
+seeking a scientific role doing a public service in the nonprofit 
 
-Garfinkel began to study epidemics as early as 4th grade, having 
+or government sectors. The work before Garfinkel is to challenge
 
-turned in a project on the mysteries surrounding the bubonic 
+the public to build the economy that cares for everyone.
 
-plague. It was Garfinkel’s dream to become an expert in public health.
-
-Garfinkel followed his curiosity about climate change and 
-
-eventually achieved a Master of Arts (M.A.) in Sustainability 
-
-from Hofstra University on Long Island. While climate change 
-
-has and will continue to affect the work public health 
-
-practitioners do, it was Garfinkel’s curiosity about social 
-
-equity that drove him back to public health. 
+***
 
 Few inventions have given rise to gains in living conditions 
 
@@ -51,5 +61,47 @@ social distress. Garfinkel hopes to imagine a world in which
 maternal health is made a priority even in times of climate 
 
 change and global pandemic.
+
+***
+
+Garfinkel began to study epidemics as early as 4th grade, having 
+
+turned in a poster board on the mysteries surrounding the Bubonic 
+
+Plague. It was Garfinkel’s dream to become an expert in public health.
+
+In high school, Garfinkel continued to pursue public health by taking
+
+a class in public health theory at a summer program at Columbia 
+
+University. Then as part of his first master's degree, Garfinkel 
+
+connected his interest in public health to sustainability through
+
+the Sustainable Development Goals.
+
+***
+
+Biostatistics bridges Garfinkel's appreciation for mathematics
+
+and data collection with his life mission to end climate change and
+
+stop racism. Throughout Garfinkel's academic and professional career,
+
+the primary focus has been to prepare to decide to tackle these 
+
+tough issues. Through public health solutions, Garfinkel wants to live 
+
+in a world where children are free from environmental harm and 
+
+one's zip code does not predict one's longevity and earning potential.
+
+While climate change has and will continue to affect the work 
+
+public health practitioners do, it was Garfinkel’s dedication to social 
+
+equity that drove him back to public health. 
+
+***
 
 You can find my CV [here](jaredgarfinkel.html)
