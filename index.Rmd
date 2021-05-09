@@ -14,17 +14,15 @@ I have always wanted to be a scientist for as long as I can
 
 remember. 
 
-[scientist pic]
+![See? I did always want to be a scientist!](./data/bubonic_plague.jpg)
 
 I used to make up quotes.
 
-[chessboard pic]
+![See? I did used to make up quotes!](./data/chessboard.jpg)
 
 I wrote this poem a while back.
 
-[pic and poem]
-
-I still love to write.
+![I still love to write.](./data/poem.jpg)
 
 ***
 
@@ -32,7 +30,7 @@ I still love to write.
 
 they become widely accessible."
 
-* Jared Garfinkel
+##### -Jared Garfinkel
 
 ## Bio
 
