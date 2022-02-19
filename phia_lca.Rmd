@@ -1,0 +1,14 @@
+---
+title: "Population-based HIV Impact Assessment - Latent Class Analysis"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<object data="./data/20210319-practicum_Field_Work_Report.pdf" width="750px" height="750px">
+    <embed src="./data/20210319-practicum_Field_Work_Report.pdf">
+    </embed>
+</object>
+
+[Download](data/20210319-practicum_Field_Work_Report.pdf)

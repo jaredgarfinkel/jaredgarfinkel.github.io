@@ -1,0 +1,14 @@
+---
+title: "Heavy Metals"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<object data="./data/Garfinkel-FinalDraft.pdf" width="750px" height="750px">
+    <embed src="./data/Garfinkel-FinalDraft.pdf">
+    </embed>
+</object>
+
+[Download](data/GARFINKEL-FinalDraft.pdf)

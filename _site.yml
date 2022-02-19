@@ -11,8 +11,16 @@ navbar:
         #   href: plotly.html
         # - text: "Dashboard"
         #   href: dashboard.html
-        - text: "Contributions"
-          href: contributions.html
+        # - text: "Contributions"
+        #   href: contributions.html
+        - text: "Waste Audit Case Study"
+          href: waste_audit.html
+        - text: "Water Quality Review"
+          href: water_quality_review.html
+        - text: "Heavy Metals"
+          href: heavy_metals.html
+        - text: "Population-based HIV Impact Assessment (PHIA)"
+          href: phia_lca.html
     - icon: fa-linkedin fa-lg
       href: http://linkedin.com/in/jaredgarfinkel
     - icon: fa-envelope fa-lg

@@ -1,6 +1,6 @@
 ---
 title: "Jared Garfinkel"
-author: "Biostatistics master's candidate seeking a scientific role doing a public service."
+author: "Early career biostatistician"
 date: "19Feb2022"
 output: html_document
 ---
