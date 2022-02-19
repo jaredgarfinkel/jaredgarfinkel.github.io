@@ -7,10 +7,10 @@ navbar:
       href: jaredgarfinkel.html
     - text: "Examples"
       menu:
-        - text: "Plotly"
-          href: plotly.html
-        - text: "Dashboard"
-          href: dashboard.html
+        # - text: "Plotly"
+        #   href: plotly.html
+        # - text: "Dashboard"
+        #   href: dashboard.html
         - text: "Contributions"
           href: contributions.html
     - icon: fa-linkedin fa-lg
@@ -19,6 +19,8 @@ navbar:
       href: mailto:<jared.garfinkel@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/jaredgarfinkel/
+    - icon: fa-brands fa-youtube
+      href: http://www.youtube.com/channel/UCZWEgqVWMP7yFgr7o0QIeyA
 output:
   html_document:
     theme: cerulean

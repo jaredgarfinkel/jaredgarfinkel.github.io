@@ -1,7 +1,7 @@
 ---
 title: "Jared Garfinkel"
 author: "Biostatistics master's candidate seeking a scientific role doing a public service."
-date: "08May2021"
+date: "19Feb2022"
 output: html_document
 ---
 
@@ -12,7 +12,7 @@ library(tidyverse)
 
 ```{r}
 name = "Jared Garfinkel"
-desc = "Sustainability professional seeking \n a scientific role doing a public service."
+desc = "Early career Biostatistician."
 cell = "(516) 972-5348"
 email = "jared.garfinkel@gmail.com"
 address = "65 Cornell Drive \n Plainview, NY 11803-1834"
@@ -43,91 +43,207 @@ header %>%
 ##### Columbia University, New York, NY
 
 * Chair's Award for Outstanding Master's Student, Biostatistics, 2021
+* Practicum Field Work Report: “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”
+
 
 ### Master of Arts in Sustainability, May 2017
 
 ##### Hofstra University, Hempstead, NY
 
 * Outstanding Academic Achievement, Geology, Environment and Sustainability Department 2017
+* Thesis: “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York” 
+  + Committee: Dr. Sandra Garren, Dr. Kevin Bisceglia, Dr. Margaret Hunter
+
 
 ### Bachelor of Science in Sustainability Studies, May 2014
 
 ##### Hofstra University, Hempstead, NY
 
 * Minors in Biology, Chemistry, and Mathematics
+* First Graduate of the Sustainability Degree Program
 
 ***
 
-## Experience
+## Research Experience
 
-### Student Assistant, Data Management and Informatics, July 2020 - present
+### Data Analyst
+
+##### Columbia University Mailman School of Public Health, New York, NY
+
+*	Independently cleaned EHR data for exploratory data analysis (EDA) in R and SAS for descriptive statistics.
+*	Understood data dictionaries for over 10 datasets with 10,000,000+ rows to operationalize variables.
+*	Maintained version control of Rprojects using GitHub.
+
+### Graduate Data Science Summer Program (GDSSP), Summer 2021
+
+##### National Institutes of Health (NIH), Remote
+
+* Suggested statistical methods for sparse data that added value by reducing bias and removing complete- and quasi-separated logistic regression models.
+
+### Practicum Field Work Report, July 2021 --- June 2021
 
 ##### ICAP at Columbia University, New York, NY
 
-* Translated data into an actionable solution to reduce data collection time-cost measures by 30% by potentially cutting an expensive blood test from a data collection protocol.
+* Advisor: Dr. Stephen Delgado, Dr. Ying Wei, Giles Reid
+  + Latent Variable Analysis
+  + Bayesian Latent Class Analysis
 
-* Developed a statistical analysis plan (SAP) to calculate prevalence, sensitivity and specificity of public health survey data in a 20,000 by 20 dataframe using latent class analysis in randomLCA in R.
-
-* Created 7 weighted summary tables and 4 figures using tidyverse and survey packages in R to improve negotiations with outside contractors on summary sheets by 15%.
-
-* Presented a visualization of the locations of 200 outstanding returns on country maps to the team using GIS tools in R to assess the situation on the ground in over 40 districts in 3 countries.
-
-### Project Management Intern, June 2020 - present		
+### Sustainability Data Analyst, June 2020 --- July 2021		
 
 ##### The Mill River Project, Hempstead, NY							 	  
 
-* Took charge of a community resilience survey design related to COVID-19 to collect 100 resident opinions for future research and public education about emergency preparedness communication.
+* Supported collection and cleansing of data on a sustainability scorecard project and community survey project.
 
-* Delivered an Institutional Review Board (IRB) protocol 1 week ahead of schedule.
+### Graduate Research Assistant, September 2016 --- May 2017
 
-* Coordinated tasks between 2 teams on 4 research projects to meet deadlines.
+##### Sustainability Studies Program, Hempstead, NY, Dr. Sandra Garren
 
-* Coached 3 high school students on survey data projects for 6 weeks to improve learning objectives.
+### Undergraduate Research Assistant, September 2013 --- May 2014
+
+##### Sustainability Studies Program, Hempstead, NY, Dr. Robert Brinkmann
+
+### Undergraduate Research Assistant,  November 2012 --- February 2013
+
+##### SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley
+
+***
+
+## Computer Skills
+
+Biostatistical Methods               | Applications
+-------------------------------------|-------------
+Model Selection                      | RStudio and RMarkdown
+Model diagnostics and fit statistics | GitHub and GitLab
+Regression                           | Base SAS
+Clustering                           | Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Microsoft Outlook, Microsoft Access
+Unsupervised learning techniques     | Python
+Causal inference                     | ArcGIS
+Bayesian analysis                    | 
+Machine learning                     |
+
+***
+
+### Honors and Awards
+
+##### Chair’s Award for Outstanding Master’s Student, 2021
+
+* Biostatistics Department, Columbia University Mailman School Of Public Health
+  + Awarded to a master’s student based on the clarity and complexity of one’s Practicum Field Work Report
+
+##### Outstanding Academic Achievement, 2017
+
+* Geology, Environment, and Sustainability Department
+
+***
+
+## Professional Affiliations
+
+### American Statistical Association NYC Metro Chapter, 2021 --- Present
+
+***
+
+## Professional Experience
+
+### Graduate Student Assistant, Data Management and Informatics Team
+
+##### ICAP at Columbia, New York, NY, July 2020 --- June 2021
+
+### Administrative Assistant
+
+##### IT Asset Management Group, Farmingdale, NY March 2019 --- August 2019
+
+### Administrative Assistant
+
+##### Albert Einstein College of Medicine, Bronx, NY January 2019 --- March 2019
+
+### Environmental Specialist I
+
+##### Veolia ES Technical Solutions, Wantagh, NY March 2018 --- December 2018
+
+### Customer Service Cashier
+
+##### Target Corporation, Hicksville, NY	September 2017 --- March 2018
+
+### Canvasser
+
+##### Citizens Campaign for the Environment, Farmingdale, NY September 2014 --- November 2014
+
+### Bakery Assistant
+
+##### Maxi Cakes, Bellmore, NY December 2012 --- April 2013
+
+***
+
+## Community Service
 
 ### Volunteer Climate Organizer, May 2017 - May 2020 	        
 
 ##### Long Island Progressive Coalition, Massapequa, NY
 
-* Persuaded 6 state-level elected officials to vote in favor of climate action legislation.
+### Nassau County DSA
 
-* Led group discussions at monthly meetings and spoke at 4 lobby sessions with elected officials.
+##### Environmental and Climate Justice Working Group Chair, Nassau County, NY, August 2019 --- June 2020
 
-* Facilitated 2 climate justice groups to influence community members to commit to volunteer for climate justice on Long Island by promoting coalition building with New York Renews.
+### Sunrise Movement Long Island
 
-* Addressed a crowd of 2,000 people at a rally to deliver a land acknowledgement at the county legislature representing Sunrise Long Island.
+##### Co-Founder/Coordinator, Islip, NY, January 2019 --- October 2019
 
-### Administrative Assistant, March 2019 – August 2019 
+### West Hempstead High School
 
-##### IT Asset Management Group, Farmingdale, NY
+##### Mentor, Hempstead, NY, September 2016 --- January 2017
 
-*	Managed twenty wholesale orders a month for a computer refurbishing company.
+### Graduate Residence Hall Student Council
 
-*	Handled logistics for up to five shipments a day, followed up with accounts receivable and accounts payable, and processed regulatory documentation.
+##### President, Hempstead, NY, September 2015 --- December 2015
 
-### Administrative Assistant, January 2019 - March 2019 
+### Nassau County Soil and Water Conservation District
 
-##### Albert Einstein College of Medicine, Bronx, NY
+##### Film Intern, Jericho, NY, April 2015 --- July 2015
 
-*	Answered phones, scheduled appointments, and maintained files and databases for the Department of Environmental Health and Safety.
+### New Yorkers Against Fracking
 
-### Environmental Specialist I, March 2018 – December 2018 
+##### Phone Bank Coordinator, Garden City, September 2014 --- November 2014
 
-##### Veolia ES Technical Solutions, Wantagh, NY
+### Students for a Greener Hofstra
 
-*	Provided specialized transportation and disposal services to clients. 
+##### President, Hempstead, NY, October 2013 --- May 2014
 
-### Customer Service Cashier, September 2017 – March 2018 
+### Sustainability Studies Club
 
-##### Target Corporation, Hicksville, NY
+##### Founder/ Vice President, Hempstead, NY, 2013-2014
 
-*	Used the POS system to process sales at a +10,000 sq. ft. retail store during the holiday season. 
+***
 
-*	Returned items and answered phones at the customer service desk. 
+## Languages
 
-### Graduate Research Intern, September 2016 - May 2017
+##### English: Native Language
 
-##### National Center for Suburban Studies, Hempstead, NY
+##### Spanish: Novice Listener, Intermediate Speaker, Reading and Writing
 
-* Generated a groundwater quality data research project using statistical analysis of 500 data points.
+##### Italian: Novice Listener, Speaker, Reading and Writing
 
-* Recommended a public health solution to the Nassau County Comptroller’s Environmental Advisory Working Group that would reduce a harmful chemical found in drinking water by 50%.
+***
+
+## OTHER
+
+##### U.s. Citizen
+
+***
+
+## Presentations and Invited Lectures
+
+### Poster Presentation, 3 August 2021
+
+##### “Helicobacter pylori Seropositivity, Pepsinogens and Circulating Inflammation Markers,” GDSSP Summer Intern Poster Day
+
+### Practicum Presentation, 16 April 2021
+
+##### “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”
+
+### Workshop, 18 Jan 2020
+
+##### “Intersectionality in the Environmental Movement,” Climate Action Summit
+
+### Thesis Defense,  12 May 2017
+
+##### “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York”
