@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Early career biostatistician" />
+
+
+<title>Jared Garfinkel</title>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="jaredgarfinkel.html">CV</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Reports
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="waste_audit.html">Waste Audit Case Study</a>
+    </li>
+    <li>
+      <a href="water_quality_review.html">Water Quality Review</a>
+    </li>
+    <li>
+      <a href="heavy_metals.html">Heavy Metals</a>
+    </li>
+    <li>
+      <a href="phia_lca.html">Population-based HIV Impact Assessment (PHIA)</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="http://linkedin.com/in/jaredgarfinkel">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:&lt;jared.garfinkel@gmail.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/jaredgarfinkel/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://www.youtube.com/channel/UCZWEgqVWMP7yFgr7o0QIeyA">
+    <span class="fa fa-brands fa-youtube"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Jared Garfinkel</h1>
+<h4 class="author">Early career biostatistician</h4>
+<h4 class="date">19Feb2022</h4>
+
+</div>
+
+
+<table>
+<tbody>
+<tr class="odd">
+<td>email</td>
+<td><span class="math inline">\(~~\)</span> <a href="mailto:jared.garfinkel@gmail.com" class="email">jared.garfinkel@gmail.com</a></td>
+</tr>
+<tr class="even">
+<td>cell</td>
+<td><span class="math inline">\(~~\)</span> (516) 972-5348</td>
+</tr>
+<tr class="odd">
+<td>address</td>
+<td><span class="math inline">\(~~\)</span> Plainview, NY 11803</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="education" class="section level2">
+<h2>Education</h2>
+<div id="master-of-science-in-biostatistics-may-2021" class="section level3">
+<h3>Master of Science in Biostatistics, May 2021</h3>
+<div id="columbia-university-new-york-ny" class="section level5">
+<h5>Columbia University, New York, NY</h5>
+<ul>
+<li>Chair’s Award for Outstanding Master’s Student, Biostatistics, 2021</li>
+<li>Practicum Field Work Report: “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”</li>
+</ul>
+</div>
+</div>
+<div id="master-of-arts-in-sustainability-may-2017" class="section level3">
+<h3>Master of Arts in Sustainability, May 2017</h3>
+<div id="hofstra-university-hempstead-ny" class="section level5">
+<h5>Hofstra University, Hempstead, NY</h5>
+<ul>
+<li>Outstanding Academic Achievement, Geology, Environment and Sustainability Department 2017</li>
+<li>Thesis: “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York”
+<ul>
+<li>Committee: Dr. Sandra Garren, Dr. Kevin Bisceglia, Dr. Margaret Hunter</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="bachelor-of-science-in-sustainability-studies-may-2014" class="section level3">
+<h3>Bachelor of Science in Sustainability Studies, May 2014</h3>
+<div id="hofstra-university-hempstead-ny-1" class="section level5">
+<h5>Hofstra University, Hempstead, NY</h5>
+<ul>
+<li>Minors in Biology, Chemistry, and Mathematics</li>
+<li>First Graduate of the Sustainability Degree Program</li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="research-experience" class="section level2">
+<h2>Research Experience</h2>
+<div id="data-analyst" class="section level3">
+<h3>Data Analyst</h3>
+<div id="columbia-university-mailman-school-of-public-health-new-york-ny" class="section level5">
+<h5>Columbia University Mailman School of Public Health, New York, NY</h5>
+<ul>
+<li>Independently cleaned EHR data for exploratory data analysis (EDA) in R and SAS for descriptive statistics.</li>
+<li>Understood data dictionaries for over 10 datasets with 10,000,000+ rows to operationalize variables.</li>
+<li>Maintained version control of Rprojects using GitHub.</li>
+</ul>
+</div>
+</div>
+<div id="graduate-data-science-summer-program-gdssp-summer-2021" class="section level3">
+<h3>Graduate Data Science Summer Program (GDSSP), Summer 2021</h3>
+<div id="national-institutes-of-health-nih-remote" class="section level5">
+<h5>National Institutes of Health (NIH), Remote</h5>
+<ul>
+<li>Suggested statistical methods for sparse data that added value by reducing bias and removing complete- and quasi-separated logistic regression models.</li>
+</ul>
+</div>
+</div>
+<div id="practicum-field-work-report-july-2021-june-2021" class="section level3">
+<h3>Practicum Field Work Report, July 2021 — June 2021</h3>
+<div id="icap-at-columbia-university-new-york-ny" class="section level5">
+<h5>ICAP at Columbia University, New York, NY</h5>
+<ul>
+<li>Advisor: Dr. Stephen Delgado, Dr. Ying Wei, Giles Reid
+<ul>
+<li>Latent Variable Analysis</li>
+<li>Bayesian Latent Class Analysis</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="sustainability-data-analyst-june-2020-july-2021" class="section level3">
+<h3>Sustainability Data Analyst, June 2020 — July 2021</h3>
+<div id="the-mill-river-project-hempstead-ny" class="section level5">
+<h5>The Mill River Project, Hempstead, NY</h5>
+<ul>
+<li>Supported collection and cleansing of data on a sustainability scorecard project and community survey project.</li>
+</ul>
+</div>
+</div>
+<div id="graduate-research-assistant-september-2016-may-2017" class="section level3">
+<h3>Graduate Research Assistant, September 2016 — May 2017</h3>
+<div id="sustainability-studies-program-hempstead-ny-dr.-sandra-garren" class="section level5">
+<h5>Sustainability Studies Program, Hempstead, NY, Dr. Sandra Garren</h5>
+</div>
+</div>
+<div id="undergraduate-research-assistant-september-2013-may-2014" class="section level3">
+<h3>Undergraduate Research Assistant, September 2013 — May 2014</h3>
+<div id="sustainability-studies-program-hempstead-ny-dr.-robert-brinkmann" class="section level5">
+<h5>Sustainability Studies Program, Hempstead, NY, Dr. Robert Brinkmann</h5>
+</div>
+</div>
+<div id="undergraduate-research-assistant-november-2012-february-2013" class="section level3">
+<h3>Undergraduate Research Assistant, November 2012 — February 2013</h3>
+<div id="suny-farmingdale-chemistry-department-farmingdale-ny-dr.-glen-hinckley" class="section level5">
+<h5>SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley</h5>
+<hr />
+</div>
+</div>
+</div>
+<div id="computer-skills" class="section level2">
+<h2>Computer Skills</h2>
+<table>
+<colgroup>
+<col width="74%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Biostatistical Methods</th>
+<th>Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model Selection</td>
+<td>RStudio and RMarkdown</td>
+</tr>
+<tr class="even">
+<td>Model diagnostics and fit statistics</td>
+<td>GitHub and GitLab</td>
+</tr>
+<tr class="odd">
+<td>Regression</td>
+<td>Base SAS</td>
+</tr>
+<tr class="even">
+<td>Clustering</td>
+<td>Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Microsoft Outlook, Microsoft Access</td>
+</tr>
+<tr class="odd">
+<td>Unsupervised learning techniques</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>Causal inference</td>
+<td>ArcGIS</td>
+</tr>
+<tr class="odd">
+<td>Bayesian analysis</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Machine learning</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="honors-and-awards" class="section level3">
+<h3>Honors and Awards</h3>
+<div id="chairs-award-for-outstanding-masters-student-2021" class="section level5">
+<h5>Chair’s Award for Outstanding Master’s Student, 2021</h5>
+<ul>
+<li>Biostatistics Department, Columbia University Mailman School Of Public Health
+<ul>
+<li>Awarded to a master’s student based on the clarity and complexity of one’s Practicum Field Work Report</li>
+</ul></li>
+</ul>
+</div>
+<div id="outstanding-academic-achievement-2017" class="section level5">
+<h5>Outstanding Academic Achievement, 2017</h5>
+<ul>
+<li>Geology, Environment, and Sustainability Department</li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="professional-affiliations" class="section level2">
+<h2>Professional Affiliations</h2>
+<div id="american-statistical-association-nyc-metro-chapter-2021-present" class="section level3">
+<h3>American Statistical Association NYC Metro Chapter, 2021 — Present</h3>
+<hr />
+</div>
+</div>
+<div id="professional-experience" class="section level2">
+<h2>Professional Experience</h2>
+<div id="graduate-student-assistant-data-management-and-informatics-team" class="section level3">
+<h3>Graduate Student Assistant, Data Management and Informatics Team</h3>
+<div id="icap-at-columbia-new-york-ny-july-2020-june-2021" class="section level5">
+<h5>ICAP at Columbia, New York, NY, July 2020 — June 2021</h5>
+</div>
+</div>
+<div id="administrative-assistant" class="section level3">
+<h3>Administrative Assistant</h3>
+<div id="it-asset-management-group-farmingdale-ny-march-2019-august-2019" class="section level5">
+<h5>IT Asset Management Group, Farmingdale, NY March 2019 — August 2019</h5>
+</div>
+</div>
+<div id="administrative-assistant-1" class="section level3">
+<h3>Administrative Assistant</h3>
+<div id="albert-einstein-college-of-medicine-bronx-ny-january-2019-march-2019" class="section level5">
+<h5>Albert Einstein College of Medicine, Bronx, NY January 2019 — March 2019</h5>
+</div>
+</div>
+<div id="environmental-specialist-i" class="section level3">
+<h3>Environmental Specialist I</h3>
+<div id="veolia-es-technical-solutions-wantagh-ny-march-2018-december-2018" class="section level5">
+<h5>Veolia ES Technical Solutions, Wantagh, NY March 2018 — December 2018</h5>
+</div>
+</div>
+<div id="customer-service-cashier" class="section level3">
+<h3>Customer Service Cashier</h3>
+<div id="target-corporation-hicksville-ny-september-2017-march-2018" class="section level5">
+<h5>Target Corporation, Hicksville, NY September 2017 — March 2018</h5>
+</div>
+</div>
+<div id="canvasser" class="section level3">
+<h3>Canvasser</h3>
+<div id="citizens-campaign-for-the-environment-farmingdale-ny-september-2014-november-2014" class="section level5">
+<h5>Citizens Campaign for the Environment, Farmingdale, NY September 2014 — November 2014</h5>
+</div>
+</div>
+<div id="bakery-assistant" class="section level3">
+<h3>Bakery Assistant</h3>
+<div id="maxi-cakes-bellmore-ny-december-2012-april-2013" class="section level5">
+<h5>Maxi Cakes, Bellmore, NY December 2012 — April 2013</h5>
+<hr />
+</div>
+</div>
+</div>
+<div id="community-service" class="section level2">
+<h2>Community Service</h2>
+<div id="volunteer-climate-organizer-may-2017---may-2020" class="section level3">
+<h3>Volunteer Climate Organizer, May 2017 - May 2020</h3>
+<div id="long-island-progressive-coalition-massapequa-ny" class="section level5">
+<h5>Long Island Progressive Coalition, Massapequa, NY</h5>
+</div>
+</div>
+<div id="nassau-county-dsa" class="section level3">
+<h3>Nassau County DSA</h3>
+<div id="environmental-and-climate-justice-working-group-chair-nassau-county-ny-august-2019-june-2020" class="section level5">
+<h5>Environmental and Climate Justice Working Group Chair, Nassau County, NY, August 2019 — June 2020</h5>
+</div>
+</div>
+<div id="sunrise-movement-long-island" class="section level3">
+<h3>Sunrise Movement Long Island</h3>
+<div id="co-foundercoordinator-islip-ny-january-2019-october-2019" class="section level5">
+<h5>Co-Founder/Coordinator, Islip, NY, January 2019 — October 2019</h5>
+</div>
+</div>
+<div id="west-hempstead-high-school" class="section level3">
+<h3>West Hempstead High School</h3>
+<div id="mentor-hempstead-ny-september-2016-january-2017" class="section level5">
+<h5>Mentor, Hempstead, NY, September 2016 — January 2017</h5>
+</div>
+</div>
+<div id="graduate-residence-hall-student-council" class="section level3">
+<h3>Graduate Residence Hall Student Council</h3>
+<div id="president-hempstead-ny-september-2015-december-2015" class="section level5">
+<h5>President, Hempstead, NY, September 2015 — December 2015</h5>
+</div>
+</div>
+<div id="nassau-county-soil-and-water-conservation-district" class="section level3">
+<h3>Nassau County Soil and Water Conservation District</h3>
+<div id="film-intern-jericho-ny-april-2015-july-2015" class="section level5">
+<h5>Film Intern, Jericho, NY, April 2015 — July 2015</h5>
+</div>
+</div>
+<div id="new-yorkers-against-fracking" class="section level3">
+<h3>New Yorkers Against Fracking</h3>
+<div id="phone-bank-coordinator-garden-city-september-2014-november-2014" class="section level5">
+<h5>Phone Bank Coordinator, Garden City, September 2014 — November 2014</h5>
+</div>
+</div>
+<div id="students-for-a-greener-hofstra" class="section level3">
+<h3>Students for a Greener Hofstra</h3>
+<div id="president-hempstead-ny-october-2013-may-2014" class="section level5">
+<h5>President, Hempstead, NY, October 2013 — May 2014</h5>
+</div>
+</div>
+<div id="sustainability-studies-club" class="section level3">
+<h3>Sustainability Studies Club</h3>
+<div id="founder-vice-president-hempstead-ny-2013-2014" class="section level5">
+<h5>Founder/ Vice President, Hempstead, NY, 2013-2014</h5>
+<hr />
+</div>
+</div>
+</div>
+<div id="languages" class="section level2">
+<h2>Languages</h2>
+<div id="english-native-language" class="section level5">
+<h5>English: Native Language</h5>
+</div>
+<div id="spanish-novice-listener-intermediate-speaker-reading-and-writing" class="section level5">
+<h5>Spanish: Novice Listener, Intermediate Speaker, Reading and Writing</h5>
+</div>
+<div id="italian-novice-listener-speaker-reading-and-writing" class="section level5">
+<h5>Italian: Novice Listener, Speaker, Reading and Writing</h5>
+<hr />
+</div>
+</div>
+<div id="other" class="section level2">
+<h2>OTHER</h2>
+<div id="u.s.-citizen" class="section level5">
+<h5>U.S. Citizen</h5>
+<hr />
+</div>
+</div>
+<div id="presentations-and-invited-lectures" class="section level2">
+<h2>Presentations and Invited Lectures</h2>
+<div id="helicobacter-pylori-seropositivity-pepsinogens-and-circulating-inflammation-markers-gdssp-summer-intern-poster-day" class="section level4">
+<h4>“Helicobacter pylori Seropositivity, Pepsinogens and Circulating Inflammation Markers,” GDSSP Summer Intern Poster Day</h4>
+<div id="poster-presentation-3-august-2021" class="section level5">
+<h5>Poster Presentation, 3 August 2021</h5>
+</div>
+</div>
+<div id="measuring-uncertainty-in-a-standard-classification-procedure-of-population-based-hiv-assessment-phia-survey-results" class="section level4">
+<h4>“Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”</h4>
+<div id="practicum-presentation-16-april-2021" class="section level5">
+<h5>Practicum Presentation, 16 April 2021</h5>
+</div>
+</div>
+<div id="intersectionality-in-the-environmental-movement-climate-action-summit" class="section level4">
+<h4>“Intersectionality in the Environmental Movement,” Climate Action Summit</h4>
+<div id="workshop-18-jan-2020" class="section level5">
+<h5>Workshop, 18 Jan 2020</h5>
+</div>
+</div>
+<div id="heavy-metals-in-road-deposited-sediment-in-town-of-oyster-bay-long-island-new-york" class="section level4">
+<h4>“Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York”</h4>
+<div id="thesis-defense-12-may-2017" class="section level5">
+<h5>Thesis Defense, 12 May 2017</h5>
+</div>
+</div>
+</div>
+
+
+
+
+<pre><code>## [1] &quot;Updated 2022 Feb 22 Jared Garfinkel. All rights reserved.&quot;</code></pre>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
