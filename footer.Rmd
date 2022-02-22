@@ -11,6 +11,5 @@ library(tidyverse)
 ```
 
 ```{r}
-
-paste0("Updated ", format(Sys.Date(), "%Y %b %d"), " Jared Garfinkel. All rights reserved.")
+str_c("Updated ", format(Sys.Date(), "%Y %b %d"), " Jared Garfinkel. All rights reserved.")
 ```

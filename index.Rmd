@@ -103,3 +103,5 @@ equity that drove him back to public health.
 ***
 
 You can find my CV [here](jaredgarfinkel.html)
+
+![](https://komarev.com/ghpvc/?username=jaredgarfinkel&color=blue)
