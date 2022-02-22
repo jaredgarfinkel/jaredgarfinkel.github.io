@@ -1,0 +1,16 @@
+---
+title: "footer"
+author: "Jared Garfinkel"
+date: "22 Feb 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+```{r}
+
+print(str_c("Updated ", format(Sys.Date(), "%Y %b %d"), " Jared Garfinkel. All rights reserved."))
+```
