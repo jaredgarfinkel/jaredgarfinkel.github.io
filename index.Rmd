@@ -12,17 +12,15 @@ output:
 
 ![](./data/Jared_and_camelias_planting_fields.jpg)
 
-### I have always wanted to be a scientist for as long as I can 
-
-remember. 
+### I have wanted to be a scientist for as long as I can remember
 
 ![See? I did always want to be a scientist!](./data/bubonic_plague.jpg)
 
-### I used to make up quotes.
+### I used to make up quotes
 
 ![See? I did used to make up quotes!](./data/chessboard.jpg)
 
-### I wrote this poem a while back.
+### I wrote this poem a while back
 
 ![I still love to write.](./data/poem.jpg)
 
