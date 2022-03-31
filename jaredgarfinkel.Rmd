@@ -36,34 +36,6 @@ header %>%
 
 ***
 
-## Education
-
-### Master of Science in Biostatistics, May 2021
-
-##### Columbia University, New York, NY
-
-* Chair's Award for Outstanding Master's Student, Biostatistics, 2021
-* Practicum Field Work Report: “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”
-
-
-### Master of Arts in Sustainability, May 2017
-
-##### Hofstra University, Hempstead, NY
-
-* Outstanding Academic Achievement, Geology, Environment and Sustainability Department 2017
-* Thesis: “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York” 
-  + Committee: Dr. Sandra Garren, Dr. Kevin Bisceglia, Dr. Margaret Hunter
-
-
-### Bachelor of Science in Sustainability Studies, May 2014
-
-##### Hofstra University, Hempstead, NY
-
-* Minors in Biology, Chemistry, and Mathematics
-* First Graduate of the Sustainability Degree Program
-
-***
-
 ## Research Experience
 
 ### Data Analyst, October 2021 --- present
@@ -123,6 +95,35 @@ Machine learning                     |
 
 ***
 
+## Education
+
+### Master of Science in Biostatistics, May 2021
+
+##### Columbia University, New York, NY
+
+* Chair's Award for Outstanding Master's Student, Biostatistics, 2021
+* Practicum Field Work Report: “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”
+
+
+### Master of Arts in Sustainability, May 2017
+
+##### Hofstra University, Hempstead, NY
+
+* Outstanding Academic Achievement, Geology, Environment and Sustainability Department 2017
+* Thesis: “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York” 
+  + Committee: Dr. Sandra Garren, Dr. Kevin Bisceglia, Dr. Margaret Hunter
+
+
+### Bachelor of Science in Sustainability Studies, May 2014
+
+##### Hofstra University, Hempstead, NY
+
+* Minors in Biology, Chemistry, and Mathematics
+* First Graduate of the Sustainability Degree Program
+
+***
+
+
 ## Honors and Awards
 
 ##### Chair’s Award for Outstanding Master’s Student, 2021
@@ -138,7 +139,7 @@ Machine learning                     |
 
 ## Professional Affiliations
 
- American Statistical Association NYC Metro Chapter, 2021 --- Present
+American Statistical Association NYC Metro Chapter, 2021 --- Present
 
 ***
 
@@ -224,7 +225,7 @@ Italian  | Intermediate Listener, Speaker, Reading and Writing
 
 ***
 
-## OTHER
+## Other
 
 U.S. Citizen
 
