@@ -6,21 +6,23 @@ output:
     toc_float: true
 ---
 
-# This is Jared's awesome website
+## This is Jared's awesome website
 
-My name is Jared and I make websites!!
+### My name is Jared and I make websites!!
 
-I have always wanted to be a scientist for as long as I can 
+![](./data/Jared_and_camelias_planting_fields.jpg)
+
+### I have always wanted to be a scientist for as long as I can 
 
 remember. 
 
 ![See? I did always want to be a scientist!](./data/bubonic_plague.jpg)
 
-I used to make up quotes.
+### I used to make up quotes.
 
 ![See? I did used to make up quotes!](./data/chessboard.jpg)
 
-I wrote this poem a while back.
+### I wrote this poem a while back.
 
 ![I still love to write.](./data/poem.jpg)
 
@@ -30,7 +32,7 @@ I wrote this poem a while back.
 
 they become widely accessible."
 
-##### -Jared Garfinkel
+* Jared Garfinkel
 
 ## Bio
 
@@ -103,5 +105,3 @@ equity that drove him back to public health.
 ***
 
 You can find my CV [here](jaredgarfinkel.html)
-
-![](https://komarev.com/ghpvc/?username=jaredgarfinkel&color=blue)
