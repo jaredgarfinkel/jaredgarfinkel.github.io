@@ -111,7 +111,7 @@ header %>%
 ## Computer Skills
 
 Biostatistical Methods               | Applications
--------------------------------------|-------------
+-------------------------------------|------------------------------------------------------------------------------------
 Model Selection                      | RStudio and RMarkdown
 Model diagnostics and fit statistics | GitHub and GitLab
 Regression                           | Base SAS
