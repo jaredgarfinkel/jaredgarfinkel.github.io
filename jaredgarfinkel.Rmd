@@ -1,7 +1,7 @@
 ---
 title: "Jared Garfinkel"
 author: "Early career biostatistician"
-date: "19Feb2022"
+date: "31 March 2022"
 output: html_document
 ---
 
@@ -96,15 +96,15 @@ header %>%
 
 ### Graduate Research Assistant, September 2016 --- May 2017
 
-##### Sustainability Studies Program, Hempstead, NY, Dr. Sandra Garren
+Sustainability Studies Program, Hempstead, NY, Dr. Sandra Garren
 
 ### Undergraduate Research Assistant, September 2013 --- May 2014
 
-##### Sustainability Studies Program, Hempstead, NY, Dr. Robert Brinkmann
+Sustainability Studies Program, Hempstead, NY, Dr. Robert Brinkmann
 
 ### Undergraduate Research Assistant,  November 2012 --- February 2013
 
-##### SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley
+SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley
 
 ***
 
@@ -123,7 +123,7 @@ Machine learning                     |
 
 ***
 
-### Honors and Awards
+## Honors and Awards
 
 ##### Chair’s Award for Outstanding Master’s Student, 2021
 
@@ -138,7 +138,7 @@ Machine learning                     |
 
 ## Professional Affiliations
 
-### American Statistical Association NYC Metro Chapter, 2021 --- Present
+ American Statistical Association NYC Metro Chapter, 2021 --- Present
 
 ***
 
@@ -146,31 +146,31 @@ Machine learning                     |
 
 ### Graduate Student Assistant, Data Management and Informatics Team
 
-##### ICAP at Columbia, New York, NY, July 2020 --- June 2021
+ICAP at Columbia, New York, NY, July 2020 --- June 2021
 
 ### Administrative Assistant
 
-##### IT Asset Management Group, Farmingdale, NY March 2019 --- August 2019
+IT Asset Management Group, Farmingdale, NY March 2019 --- August 2019
 
 ### Administrative Assistant
 
-##### Albert Einstein College of Medicine, Bronx, NY January 2019 --- March 2019
+Albert Einstein College of Medicine, Bronx, NY January 2019 --- March 2019
 
 ### Environmental Specialist I
 
-##### Veolia ES Technical Solutions, Wantagh, NY March 2018 --- December 2018
+Veolia ES Technical Solutions, Wantagh, NY March 2018 --- December 2018
 
 ### Customer Service Cashier
 
-##### Target Corporation, Hicksville, NY	September 2017 --- March 2018
+Target Corporation, Hicksville, NY	September 2017 --- March 2018
 
 ### Canvasser
 
-##### Citizens Campaign for the Environment, Farmingdale, NY September 2014 --- November 2014
+Citizens Campaign for the Environment, Farmingdale, NY September 2014 --- November 2014
 
 ### Bakery Assistant
 
-##### Maxi Cakes, Bellmore, NY December 2012 --- April 2013
+Maxi Cakes, Bellmore, NY December 2012 --- April 2013
 
 ***
 
@@ -178,55 +178,54 @@ Machine learning                     |
 
 ### Volunteer Climate Organizer, May 2017 - May 2020 	        
 
-##### Long Island Progressive Coalition, Massapequa, NY
+Long Island Progressive Coalition, Massapequa, NY
 
 ### Nassau County DSA
 
-##### Environmental and Climate Justice Working Group Chair, Nassau County, NY, August 2019 --- June 2020
+Environmental and Climate Justice Working Group Chair, Nassau County, NY, August 2019 --- June 2020
 
 ### Sunrise Movement Long Island
 
-##### Co-Founder/Coordinator, Islip, NY, January 2019 --- October 2019
+Co-Founder/Coordinator, Islip, NY, January 2019 --- October 2019
 
 ### West Hempstead High School
 
-##### Mentor, Hempstead, NY, September 2016 --- January 2017
+Mentor, Hempstead, NY, September 2016 --- January 2017
 
 ### Graduate Residence Hall Student Council
 
-##### President, Hempstead, NY, September 2015 --- December 2015
+President, Hempstead, NY, September 2015 --- December 2015
 
 ### Nassau County Soil and Water Conservation District
 
-##### Film Intern, Jericho, NY, April 2015 --- July 2015
+Film Intern, Jericho, NY, April 2015 --- July 2015
 
 ### New Yorkers Against Fracking
 
-##### Phone Bank Coordinator, Garden City, September 2014 --- November 2014
+Phone Bank Coordinator, Garden City, September 2014 --- November 2014
 
 ### Students for a Greener Hofstra
 
-##### President, Hempstead, NY, October 2013 --- May 2014
+President, Hempstead, NY, October 2013 --- May 2014
 
 ### Sustainability Studies Club
 
-##### Founder/ Vice President, Hempstead, NY, 2013-2014
+Founder/ Vice President, Hempstead, NY, 2013-2014
 
 ***
 
 ## Languages
 
-##### English: Native Language
-
-##### Spanish: Novice Listener, Intermediate Speaker, Reading and Writing
-
-##### Italian: Novice Listener, Speaker, Reading and Writing
+--------|----------------------------------------------------------
+English | Native Language
+Spanish | Novice Listener, Intermediate Speaker, Reading and Writing
+Italian | Intermediate Listener, Speaker, Reading and Writing
 
 ***
 
 ## OTHER
 
-##### U.S. Citizen
+U.S. Citizen
 
 ***
 
@@ -234,16 +233,16 @@ Machine learning                     |
 
 #### “Helicobacter pylori Seropositivity, Pepsinogens and Circulating Inflammation Markers” 
 
-##### NIH Graduate Data Science Summer Intern Poster Day, 3 August 2021
+NIH Graduate Data Science Summer Intern Poster Day, 3 August 2021
 
 #### “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”
 
-##### Columbia University Biostatistics Master of Science Practicum Presentation, 16 April 2021
+Columbia University Biostatistics Master of Science Practicum Presentation, 16 April 2021
 
 #### “Intersectionality in the Environmental Movement” 
 
-##### Long Island Climate Action Summit Workshop, 18 Jan 2020
+Long Island Climate Action Summit Workshop, 18 Jan 2020
 
 #### “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York”
 
-##### Hofstra University Sustainability Master of Arts Thesis Defense 12 May 2017
+Hofstra University Sustainability Master of Arts Thesis Defense 12 May 2017
