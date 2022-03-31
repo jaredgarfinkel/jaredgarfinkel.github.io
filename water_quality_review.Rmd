@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-<object data="./data/DioixaneREviewMay25.pdf" width="750px" height="750px">
+<object data="./data/DioxaneReviewMay25.pdf" width="750px" height="750px">
     <embed src="./data/DioxaneReviewMay25.pdf">
     </embed>
 </object>
