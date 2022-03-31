@@ -216,10 +216,11 @@ Founder/ Vice President, Hempstead, NY, 2013-2014
 
 ## Languages
 
---------|----------------------------------------------------------
-English | Native Language
-Spanish | Novice Listener, Intermediate Speaker, Reading and Writing
-Italian | Intermediate Listener, Speaker, Reading and Writing
+Language | Proficiency Level
+---------|-----------------------------------------------------------
+English  | Native Language
+Spanish  | Novice Listener, Intermediate Speaker, Reading and Writing
+Italian  | Intermediate Listener, Speaker, Reading and Writing
 
 ***
 
