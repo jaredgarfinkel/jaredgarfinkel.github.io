@@ -12,10 +12,10 @@ library(tidyverse)
 
 ```{r}
 name = "Jared Garfinkel"
-desc = "Early career Biostatistician."
+desc = "Data Analyst"
 cell = "(516) 972-5348"
 email = "jared.garfinkel@gmail.com"
-address = "65 Cornell Drive \n Plainview, NY 11803-1834"
+address = "25 Cooper Street Apt 3A \n New York, NY 10034"
 header = tibble(
   about = c(name, desc, address),
   contact = c("", cell, email)
@@ -32,13 +32,28 @@ header %>%
 | ------  | ------------ |
 | email   |$~~$ jared.garfinkel@gmail.com |
 | cell    |$~~$ (516) 972-5348 |
-| address |$~~$ Plainview, NY 11803 |
+| address |$~~$ New York, NY 10034 |
 
 ***
 
 ## Research Experience
 
-### Data Analyst, October 2021 --- present
+### Data Analyst, June 2022 --- present
+
+##### NGO ICAP, New York, NY 10034
+
+*  Provide data/statistical analysis and data visualizations in support of surveys related to HIV and hepatitis international infection rates spanning large populations (tens of thousands of 8  participants). 
+*  Perform quality assurance assessments validating infection data against laboratory findings. 
+*  Produced more than 20 dashboards using R packages. 
+*  Coalesce data using Shiny to create interactive data visualizations that form the foundation of essential reports. 
+*  Automate aspects of data visualization reports for efficiency. 
+*  Deliver statistical programming expertise to projects. Update legacy code to specifications in SAS and summarize statistics in more than 20 tables. 
+*  Merge data from eight different datasets in SAS, .xlsx, or .csv. This data is voluminous (50,000+ lines of code). 
+*  Maintain a database for managing and tracking data discrepancies. 
+*  Utilize Excel pivot tables and x-lookup to research and verify code. 
+*  Wrote and periodically maintain a GitLab guide for colleagues.
+
+### Data Analyst, October 2021 --- June 2022
 
 ##### Columbia University Mailman School of Public Health, New York, NY
 
@@ -60,11 +75,14 @@ header %>%
   + Latent Variable Analysis
   + Bayesian Latent Class Analysis
 
+*  Developed a statistical analysis plan for survey data in a 20,000 x 20 data frame. 
+Using R Markdown, created bar graphs and maps using numerical and geographic data. This effort aided consultants hired to do complex analytical work.
+
 ### Sustainability Data Analyst, June 2020 --- July 2021		
 
 ##### The Mill River Project, Hempstead, NY							 	  
 
-* Supported collection and cleansing of data on a sustainability scorecard project and community survey project.
+* For two projects (sustainability scorecard and community survey) cleansed data using R.
 
 ### Graduate Research Assistant, September 2016 --- May 2017
 
@@ -79,6 +97,10 @@ Sustainability Studies Program, Hempstead, NY, Dr. Robert Brinkmann
 SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley
 
 ***
+
+## Publications
+
+Shah, Riddhi, et al. “Statins restore endothelial protection against complement activity in obstructive sleep apnea: A randomized clinical trial.” Annals of the American Thoracic Society, vol. 20, no. 7, 1 July 2023, pp. 1029–1037, https://doi.org/10.1513/annalsats.202209-761oc. 
 
 ## Computer Skills
 
