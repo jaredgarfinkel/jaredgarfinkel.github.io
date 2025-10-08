@@ -13,7 +13,7 @@
 
 <title>My awesome website</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -65,6 +65,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -85,6 +86,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -142,11 +146,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +183,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +192,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -310,7 +311,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -326,7 +327,7 @@ div.tocify {
   <a href="jaredgarfinkel.html">CV</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Reports
      
     <span class="caret"></span>
@@ -390,25 +391,28 @@ div.tocify {
 <h3>My name is Jared and I make websites!!</h3>
 <p><img src="data/Jared_and_camelias_planting_fields.jpg" /></p>
 </div>
-<div id="i-have-wanted-to-be-a-scientist-for-as-long-as-i-can-remember" class="section level3">
+<div id="i-have-wanted-to-be-a-scientist-for-as-long-as-i-can-remember"
+class="section level3">
 <h3>I have wanted to be a scientist for as long as I can remember</h3>
-<div class="figure">
-<img src="data/bubonic_plague.jpg" alt="" />
-<p class="caption">See? I did always want to be a scientist!</p>
+<div class="float">
+<img src="data/bubonic_plague.jpg"
+alt="See? I did always want to be a scientist!" />
+<div class="figcaption">See? I did always want to be a scientist!</div>
 </div>
 </div>
 <div id="i-used-to-make-up-quotes" class="section level3">
 <h3>I used to make up quotes</h3>
-<div class="figure">
-<img src="data/chessboard.jpg" alt="" />
-<p class="caption">See? I did used to make up quotes!</p>
+<div class="float">
+<img src="data/chessboard.jpg"
+alt="See? I did used to make up quotes!" />
+<div class="figcaption">See? I did used to make up quotes!</div>
 </div>
 </div>
 <div id="i-wrote-this-poem-a-while-back" class="section level3">
 <h3>I wrote this poem a while back</h3>
-<div class="figure">
-<img src="data/poem.jpg" alt="" />
-<p class="caption">I still love to write.</p>
+<div class="float">
+<img src="data/poem.jpg" alt="I still love to write." />
+<div class="figcaption">I still love to write.</div>
 </div>
 <hr />
 <p>“When issues of significant moral value can be related to safety</p>
@@ -428,14 +432,19 @@ div.tocify {
 <p>the public to build the economy that cares for everyone.</p>
 <hr />
 <p>Biostatistics bridges Garfinkel’s appreciation for mathematics</p>
-<p>and data collection with his life mission to end climate change and</p>
-<p>stop racism. Throughout Garfinkel’s academic and professional career,</p>
+<p>and data collection with his life mission to end climate change
+and</p>
+<p>stop racism. Throughout Garfinkel’s academic and professional
+career,</p>
 <p>the primary focus has been to prepare to decide to tackle these</p>
-<p>tough issues. Through public health solutions, Garfinkel wants to live</p>
+<p>tough issues. Through public health solutions, Garfinkel wants to
+live</p>
 <p>in a world where children are free from environmental harm and</p>
-<p>one’s zip code does not predict one’s longevity and earning potential.</p>
+<p>one’s zip code does not predict one’s longevity and earning
+potential.</p>
 <p>While climate change has and will continue to affect the work</p>
-<p>public health practitioners do, it was Garfinkel’s dedication to social</p>
+<p>public health practitioners do, it was Garfinkel’s dedication to
+social</p>
 <p>equity that drove him back to public health.</p>
 <hr />
 <p>You can find my CV <a href="jaredgarfinkel.html">here</a></p>
@@ -444,7 +453,7 @@ div.tocify {
 
 
 
-<pre><code>## [1] &quot;Updated 2022 Mar 31 Jared Garfinkel. All rights reserved.&quot;</code></pre>
+<pre><code>## [1] &quot;Updated 2022 Apr 12 Jared Garfinkel. All rights reserved.&quot;</code></pre>
 
 
 </div>
