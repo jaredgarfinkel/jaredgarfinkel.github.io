@@ -15,7 +15,7 @@
 
 <title>Jared Garfinkel</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -64,6 +64,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -84,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -141,11 +145,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -174,8 +182,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -183,16 +191,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -236,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -252,7 +253,7 @@ $(document).ready(function () {
   <a href="jaredgarfinkel.html">CV</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Reports
      
     <span class="caret"></span>
@@ -316,7 +317,9 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td>email</td>
-<td><span class="math inline">\(~~\)</span> <a href="mailto:jared.garfinkel@gmail.com" class="email">jared.garfinkel@gmail.com</a></td>
+<td><span class="math inline">\(~~\)</span> <a
+href="mailto:jared.garfinkel@gmail.com"
+class="email">jared.garfinkel@gmail.com</a></td>
 </tr>
 <tr class="even">
 <td>cell</td>
@@ -324,36 +327,74 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td>address</td>
-<td><span class="math inline">\(~~\)</span> Plainview, NY 11803</td>
+<td><span class="math inline">\(~~\)</span> New York, NY 10034</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <div id="research-experience" class="section level2">
 <h2>Research Experience</h2>
-<div id="data-analyst-october-2021-present" class="section level3">
-<h3>Data Analyst, October 2021 — present</h3>
-<div id="columbia-university-mailman-school-of-public-health-new-york-ny" class="section level5">
-<h5>Columbia University Mailman School of Public Health, New York, NY</h5>
+<div id="data-analyst-june-2022-present" class="section level3">
+<h3>Data Analyst, June 2022 — present</h3>
+<div id="ngo-icap-new-york-ny-10034" class="section level5">
+<h5>NGO ICAP, New York, NY 10034</h5>
 <ul>
-<li>Independently cleaned EHR data for exploratory data analysis (EDA) in R and SAS for descriptive statistics.</li>
-<li>Understood data dictionaries for over 10 datasets with 10,000,000+ rows to operationalize variables.</li>
+<li>Provide data/statistical analysis and data visualizations in support
+of surveys related to HIV and hepatitis international infection rates
+spanning large populations (tens of thousands of 8 participants).</li>
+<li>Perform quality assurance assessments validating infection data
+against laboratory findings.</li>
+<li>Produced more than 20 dashboards using R packages.</li>
+<li>Coalesce data using Shiny to create interactive data visualizations
+that form the foundation of essential reports.</li>
+<li>Automate aspects of data visualization reports for efficiency.</li>
+<li>Deliver statistical programming expertise to projects. Update legacy
+code to specifications in SAS and summarize statistics in more than 20
+tables.</li>
+<li>Merge data from eight different datasets in SAS, .xlsx, or .csv.
+This data is voluminous (50,000+ lines of code).</li>
+<li>Maintain a database for managing and tracking data
+discrepancies.</li>
+<li>Utilize Excel pivot tables and x-lookup to research and verify
+code.</li>
+<li>Wrote and periodically maintain a GitLab guide for colleagues.</li>
+</ul>
+</div>
+</div>
+<div id="data-analyst-october-2021-june-2022" class="section level3">
+<h3>Data Analyst, October 2021 — June 2022</h3>
+<div
+id="columbia-university-mailman-school-of-public-health-new-york-ny"
+class="section level5">
+<h5>Columbia University Mailman School of Public Health, New York,
+NY</h5>
+<ul>
+<li>Independently cleaned EHR data for exploratory data analysis (EDA)
+in R and SAS for descriptive statistics.</li>
+<li>Understood data dictionaries for over 10 datasets with 10,000,000+
+rows to operationalize variables.</li>
 <li>Maintained version control of R Projects using GitHub.</li>
 </ul>
 </div>
 </div>
-<div id="graduate-data-science-summer-program-gdssp-summer-2021" class="section level3">
+<div id="graduate-data-science-summer-program-gdssp-summer-2021"
+class="section level3">
 <h3>Graduate Data Science Summer Program (GDSSP), Summer 2021</h3>
-<div id="national-institutes-of-health-nih-remote" class="section level5">
+<div id="national-institutes-of-health-nih-remote"
+class="section level5">
 <h5>National Institutes of Health (NIH), Remote</h5>
 <ul>
-<li>Suggested statistical methods for sparse data that added value by reducing bias and removing complete- and quasi-separated logistic regression models.</li>
+<li>Suggested statistical methods for sparse data that added value by
+reducing bias and removing complete- and quasi-separated logistic
+regression models.</li>
 </ul>
 </div>
 </div>
-<div id="practicum-field-work-report-july-2021-june-2021" class="section level3">
+<div id="practicum-field-work-report-july-2021-june-2021"
+class="section level3">
 <h3>Practicum Field Work Report, July 2021 — June 2021</h3>
-<div id="icap-at-columbia-university-new-york-ny" class="section level5">
+<div id="icap-at-columbia-university-new-york-ny"
+class="section level5">
 <h5>ICAP at Columbia University, New York, NY</h5>
 <ul>
 <li>Advisor: Dr. Stephen Delgado, Dr. Ying Wei, Giles Reid
@@ -361,31 +402,51 @@ $(document).ready(function () {
 <li>Latent Variable Analysis</li>
 <li>Bayesian Latent Class Analysis</li>
 </ul></li>
+<li>Developed a statistical analysis plan for survey data in a 20,000 x
+20 data frame. Using R Markdown, created bar graphs and maps using
+numerical and geographic data. This effort aided consultants hired to do
+complex analytical work.</li>
 </ul>
 </div>
 </div>
-<div id="sustainability-data-analyst-june-2020-july-2021" class="section level3">
+<div id="sustainability-data-analyst-june-2020-july-2021"
+class="section level3">
 <h3>Sustainability Data Analyst, June 2020 — July 2021</h3>
 <div id="the-mill-river-project-hempstead-ny" class="section level5">
 <h5>The Mill River Project, Hempstead, NY</h5>
 <ul>
-<li>Supported collection and cleansing of data on a sustainability scorecard project and community survey project.</li>
+<li>For two projects (sustainability scorecard and community survey)
+cleansed data using R.</li>
 </ul>
 </div>
 </div>
-<div id="graduate-research-assistant-september-2016-may-2017" class="section level3">
+<div id="graduate-research-assistant-september-2016-may-2017"
+class="section level3">
 <h3>Graduate Research Assistant, September 2016 — May 2017</h3>
 <p>Sustainability Studies Program, Hempstead, NY, Dr. Sandra Garren</p>
 </div>
-<div id="undergraduate-research-assistant-september-2013-may-2014" class="section level3">
+<div id="undergraduate-research-assistant-september-2013-may-2014"
+class="section level3">
 <h3>Undergraduate Research Assistant, September 2013 — May 2014</h3>
-<p>Sustainability Studies Program, Hempstead, NY, Dr. Robert Brinkmann</p>
+<p>Sustainability Studies Program, Hempstead, NY, Dr. Robert
+Brinkmann</p>
 </div>
-<div id="undergraduate-research-assistant-november-2012-february-2013" class="section level3">
+<div id="undergraduate-research-assistant-november-2012-february-2013"
+class="section level3">
 <h3>Undergraduate Research Assistant, November 2012 — February 2013</h3>
-<p>SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley</p>
+<p>SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen
+Hinckley</p>
 <hr />
 </div>
+</div>
+<div id="publications" class="section level2">
+<h2>Publications</h2>
+<p>Shah, Riddhi, et al. “Statins restore endothelial protection against
+complement activity in obstructive sleep apnea: A randomized clinical
+trial.” Annals of the American Thoracic Society, vol. 20, no. 7, 1 July
+2023, pp. 1029–1037, <a
+href="https://doi.org/10.1513/annalsats.202209-761oc"
+class="uri">https://doi.org/10.1513/annalsats.202209-761oc</a>.</p>
 </div>
 <div id="computer-skills" class="section level2">
 <h2>Computer Skills</h2>
@@ -415,7 +476,8 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td>Clustering</td>
-<td>Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Microsoft Outlook, Microsoft Access</td>
+<td>Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Microsoft
+Outlook, Microsoft Access</td>
 </tr>
 <tr class="odd">
 <td>Unsupervised learning techniques</td>
@@ -439,30 +501,39 @@ $(document).ready(function () {
 </div>
 <div id="education" class="section level2">
 <h2>Education</h2>
-<div id="master-of-science-in-biostatistics-may-2021" class="section level3">
+<div id="master-of-science-in-biostatistics-may-2021"
+class="section level3">
 <h3>Master of Science in Biostatistics, May 2021</h3>
 <div id="columbia-university-new-york-ny" class="section level5">
 <h5>Columbia University, New York, NY</h5>
 <ul>
-<li>Chair’s Award for Outstanding Master’s Student, Biostatistics, 2021</li>
-<li>Practicum Field Work Report: “Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”</li>
+<li>Chair’s Award for Outstanding Master’s Student, Biostatistics,
+2021</li>
+<li>Practicum Field Work Report: “Measuring Uncertainty in a Standard
+Classification Procedure of Population-based HIV Assessment (PHIA)
+Survey Results”</li>
 </ul>
 </div>
 </div>
-<div id="master-of-arts-in-sustainability-may-2017" class="section level3">
+<div id="master-of-arts-in-sustainability-may-2017"
+class="section level3">
 <h3>Master of Arts in Sustainability, May 2017</h3>
 <div id="hofstra-university-hempstead-ny" class="section level5">
 <h5>Hofstra University, Hempstead, NY</h5>
 <ul>
-<li>Outstanding Academic Achievement, Geology, Environment and Sustainability Department 2017</li>
-<li>Thesis: “Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York”
+<li>Outstanding Academic Achievement, Geology, Environment and
+Sustainability Department 2017</li>
+<li>Thesis: “Heavy Metals in Road Deposited Sediment in Town of Oyster
+Bay, Long Island, New York”
 <ul>
-<li>Committee: Dr. Sandra Garren, Dr. Kevin Bisceglia, Dr. Margaret Hunter</li>
+<li>Committee: Dr. Sandra Garren, Dr. Kevin Bisceglia, Dr. Margaret
+Hunter</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="bachelor-of-science-in-sustainability-studies-may-2014" class="section level3">
+<div id="bachelor-of-science-in-sustainability-studies-may-2014"
+class="section level3">
 <h3>Bachelor of Science in Sustainability Studies, May 2014</h3>
 <div id="hofstra-university-hempstead-ny-1" class="section level5">
 <h5>Hofstra University, Hempstead, NY</h5>
@@ -476,12 +547,15 @@ $(document).ready(function () {
 </div>
 <div id="honors-and-awards" class="section level2">
 <h2>Honors and Awards</h2>
-<div id="chairs-award-for-outstanding-masters-student-2021" class="section level5">
+<div id="chairs-award-for-outstanding-masters-student-2021"
+class="section level5">
 <h5>Chair’s Award for Outstanding Master’s Student, 2021</h5>
 <ul>
-<li>Biostatistics Department, Columbia University Mailman School Of Public Health
+<li>Biostatistics Department, Columbia University Mailman School Of
+Public Health
 <ul>
-<li>Awarded to a master’s student based on the clarity and complexity of one’s Practicum Field Work Report</li>
+<li>Awarded to a master’s student based on the clarity and complexity of
+one’s Practicum Field Work Report</li>
 </ul></li>
 </ul>
 </div>
@@ -495,26 +569,33 @@ $(document).ready(function () {
 </div>
 <div id="professional-affiliations" class="section level2">
 <h2>Professional Affiliations</h2>
-<p>American Statistical Association NYC Metro Chapter, 2021 — Present</p>
+<p>American Statistical Association NYC Metro Chapter, 2021 —
+Present</p>
 <hr />
 </div>
 <div id="professional-experience" class="section level2">
 <h2>Professional Experience</h2>
-<div id="graduate-student-assistant-data-management-and-informatics-team" class="section level3">
-<h3>Graduate Student Assistant, Data Management and Informatics Team</h3>
+<div
+id="graduate-student-assistant-data-management-and-informatics-team"
+class="section level3">
+<h3>Graduate Student Assistant, Data Management and Informatics
+Team</h3>
 <p>ICAP at Columbia, New York, NY, July 2020 — June 2021</p>
 </div>
 <div id="administrative-assistant" class="section level3">
 <h3>Administrative Assistant</h3>
-<p>IT Asset Management Group, Farmingdale, NY March 2019 — August 2019</p>
+<p>IT Asset Management Group, Farmingdale, NY March 2019 — August
+2019</p>
 </div>
 <div id="administrative-assistant-1" class="section level3">
 <h3>Administrative Assistant</h3>
-<p>Albert Einstein College of Medicine, Bronx, NY January 2019 — March 2019</p>
+<p>Albert Einstein College of Medicine, Bronx, NY January 2019 — March
+2019</p>
 </div>
 <div id="environmental-specialist-i" class="section level3">
 <h3>Environmental Specialist I</h3>
-<p>Veolia ES Technical Solutions, Wantagh, NY March 2018 — December 2018</p>
+<p>Veolia ES Technical Solutions, Wantagh, NY March 2018 — December
+2018</p>
 </div>
 <div id="customer-service-cashier" class="section level3">
 <h3>Customer Service Cashier</h3>
@@ -522,7 +603,8 @@ $(document).ready(function () {
 </div>
 <div id="canvasser" class="section level3">
 <h3>Canvasser</h3>
-<p>Citizens Campaign for the Environment, Farmingdale, NY September 2014 — November 2014</p>
+<p>Citizens Campaign for the Environment, Farmingdale, NY September 2014
+— November 2014</p>
 </div>
 <div id="bakery-assistant" class="section level3">
 <h3>Bakery Assistant</h3>
@@ -534,35 +616,44 @@ $(document).ready(function () {
 <h2>Community Service</h2>
 <div id="volunteer-climate-organizer" class="section level3">
 <h3>Volunteer Climate Organizer</h3>
-<p>Long Island Progressive Coalition, Massapequa, NY, May 2017 - May 2020</p>
+<p>Long Island Progressive Coalition, Massapequa, NY, May 2017 - May
+2020</p>
 </div>
-<div id="environmental-and-climate-justice-working-group-chair" class="section level3">
+<div id="environmental-and-climate-justice-working-group-chair"
+class="section level3">
 <h3>Environmental and Climate Justice Working Group Chair</h3>
 <p>Nassau County DSA, Plainview, NY, August 2019 — June 2020</p>
 </div>
 <div id="co-foundercoordinator" class="section level3">
 <h3>Co-Founder/Coordinator</h3>
-<p>Sunrise Movement Long Island, Islip, NY, January 2019 — October 2019</p>
+<p>Sunrise Movement Long Island, Islip, NY, January 2019 — October
+2019</p>
 </div>
-<div id="mentor-for-advanced-high-school-students" class="section level3">
+<div id="mentor-for-advanced-high-school-students"
+class="section level3">
 <h3>Mentor for Advanced High School Students</h3>
-<p>West Hempstead High School, Hempstead, NY, September 2016 — January 2017</p>
+<p>West Hempstead High School, Hempstead, NY, September 2016 — January
+2017</p>
 </div>
 <div id="president" class="section level3">
 <h3>President</h3>
-<p>Graduate Residence Hall Student Council, Hempstead, NY, September 2015 — December 2015</p>
+<p>Graduate Residence Hall Student Council, Hempstead, NY, September
+2015 — December 2015</p>
 </div>
 <div id="film-intern" class="section level3">
 <h3>Film Intern</h3>
-<p>Nassau County Soil and Water Conservation District, Jericho, NY, April 2015 — July 2015</p>
+<p>Nassau County Soil and Water Conservation District, Jericho, NY,
+April 2015 — July 2015</p>
 </div>
 <div id="phone-bank-coordinator" class="section level3">
 <h3>Phone Bank Coordinator</h3>
-<p>New Yorkers Against Fracking, Garden City, September 2014 — November 2014</p>
+<p>New Yorkers Against Fracking, Garden City, September 2014 — November
+2014</p>
 </div>
 <div id="president-1" class="section level3">
 <h3>President</h3>
-<p>Students for a Greener Hofstra, Hempstead, NY, October 2013 — May 2014</p>
+<p>Students for a Greener Hofstra, Hempstead, NY, October 2013 — May
+2014</p>
 </div>
 <div id="foundervice-president" class="section level3">
 <h3>Founder/Vice President</h3>
@@ -603,28 +694,40 @@ $(document).ready(function () {
 </div>
 <div id="presentations-and-invited-lectures" class="section level2">
 <h2>Presentations and Invited Lectures</h2>
-<div id="helicobacter-pylori-seropositivity-pepsinogens-and-circulating-inflammation-markers" class="section level4">
-<h4>“Helicobacter pylori Seropositivity, Pepsinogens and Circulating Inflammation Markers”</h4>
+<div
+id="helicobacter-pylori-seropositivity-pepsinogens-and-circulating-inflammation-markers"
+class="section level4">
+<h4>“Helicobacter pylori Seropositivity, Pepsinogens and Circulating
+Inflammation Markers”</h4>
 <p>NIH Graduate Data Science Summer Intern Poster Day, 3 August 2021</p>
 </div>
-<div id="measuring-uncertainty-in-a-standard-classification-procedure-of-population-based-hiv-assessment-phia-survey-results" class="section level4">
-<h4>“Measuring Uncertainty in a Standard Classification Procedure of Population-based HIV Assessment (PHIA) Survey Results”</h4>
-<p>Columbia University Biostatistics Master of Science Practicum Presentation, 16 April 2021</p>
+<div
+id="measuring-uncertainty-in-a-standard-classification-procedure-of-population-based-hiv-assessment-phia-survey-results"
+class="section level4">
+<h4>“Measuring Uncertainty in a Standard Classification Procedure of
+Population-based HIV Assessment (PHIA) Survey Results”</h4>
+<p>Columbia University Biostatistics Master of Science Practicum
+Presentation, 16 April 2021</p>
 </div>
-<div id="intersectionality-in-the-environmental-movement" class="section level4">
+<div id="intersectionality-in-the-environmental-movement"
+class="section level4">
 <h4>“Intersectionality in the Environmental Movement”</h4>
 <p>Long Island Climate Action Summit Workshop, 18 Jan 2020</p>
 </div>
-<div id="heavy-metals-in-road-deposited-sediment-in-town-of-oyster-bay-long-island-new-york" class="section level4">
-<h4>“Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long Island, New York”</h4>
-<p>Hofstra University Sustainability Master of Arts Thesis Defense 12 May 2017</p>
+<div
+id="heavy-metals-in-road-deposited-sediment-in-town-of-oyster-bay-long-island-new-york"
+class="section level4">
+<h4>“Heavy Metals in Road Deposited Sediment in Town of Oyster Bay, Long
+Island, New York”</h4>
+<p>Hofstra University Sustainability Master of Arts Thesis Defense 12
+May 2017</p>
 </div>
 </div>
 
 
 
 
-<pre><code>## [1] &quot;Updated 2022 Apr 12 Jared Garfinkel. All rights reserved.&quot;</code></pre>
+<pre><code>## [1] &quot;Updated 2025 Oct 16 Jared Garfinkel. All rights reserved.&quot;</code></pre>
 
 
 
