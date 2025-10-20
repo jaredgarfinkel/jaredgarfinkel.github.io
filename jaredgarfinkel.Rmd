@@ -1,7 +1,7 @@
 ---
 title: "Jared Garfinkel"
-author: "Early career biostatistician"
-date: "31 March 2022"
+author: "Data Analyst"
+date: "20 October 2025"
 output: html_document
 ---
 
