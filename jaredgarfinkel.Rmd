@@ -1,7 +1,7 @@
 ---
 title: "Jared Garfinkel"
 author: "Data Analyst"
-date: "20 October 2025"
+date: "04 February 2026"
 output: html_document
 ---
 
@@ -14,7 +14,7 @@ library(tidyverse)
 name = "Jared Garfinkel"
 desc = "Data Analyst"
 cell = "(516) 972-5348"
-email = "jared.garfinkel@gmail.com"
+email = "jaredgarfinkel@proton.me"
 address = "25 Cooper Street Apt 3A \n New York, NY 10034"
 header = tibble(
   about = c(name, desc, address),
@@ -30,7 +30,7 @@ header %>%
 
 |         |              |
 | ------  | ------------ |
-| email   |$~~$ jared.garfinkel@gmail.com |
+| email   |$~~$ jaredgarfinkel@proton.me |
 | cell    |$~~$ (516) 972-5348 |
 | address |$~~$ New York, NY 10034 |
 
@@ -38,7 +38,7 @@ header %>%
 
 ## Research Experience
 
-### Data Analyst, June 2022 --- present
+### Data Analyst, June 2022 --- October 2025
 
 ##### NGO ICAP, New York, NY 10034
 
@@ -101,6 +101,8 @@ SUNY Farmingdale Chemistry Department, Farmingdale, NY, Dr. Glen Hinckley
 ## Publications
 
 Shah, Riddhi, et al. “Statins restore endothelial protection against complement activity in obstructive sleep apnea: A randomized clinical trial.” Annals of the American Thoracic Society, vol. 20, no. 7, 1 July 2023, pp. 1029–1037, https://doi.org/10.1513/annalsats.202209-761oc. 
+
+Patel, Hetal K., et al. “Performance of national HIV testing algorithms in 14 population-based HIV impact assessment surveys: Accuracy of HIV diagnosis using a two-test strategy, with or without a tie-breaker test, in different prevalence settings, 2015-2022.” Journal of Clinical Microbiology, vol. 63, no. 12, 17 Dec. 2025, https://doi.org/10.1128/jcm.01173-25. 
 
 ## Computer Skills
 
