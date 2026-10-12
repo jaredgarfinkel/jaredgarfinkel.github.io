@@ -21,6 +21,8 @@ navbar:
           href: heavy_metals.html
         - text: "Population-based HIV Impact Assessment (PHIA)"
           href: phia_lca.html
+        - text: "Women's Diversity Network: Listening Sessions"
+          href: wdn_listening_sessions.html
     - icon: fa-linkedin fa-lg
       href: http://linkedin.com/in/jaredgarfinkel
     - icon: fa-envelope fa-lg
