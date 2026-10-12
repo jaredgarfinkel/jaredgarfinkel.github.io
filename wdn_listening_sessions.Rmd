@@ -1,0 +1,14 @@
+---
+title: "Women's Diversity Network: Listening Sessions"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<object data="./data/20220205-WDN-listening_sessions_report-jsg.pdf" width="750px" height="750px">
+    <embed src="./data/20220205-WDN-listening_sessions_report-jsg.pdf">
+    </embed>
+</object>
+
+[Download](data/20220205-WDN-listening_sessions_report-jsg.pdf)
